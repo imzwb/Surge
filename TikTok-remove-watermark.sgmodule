@@ -2,6 +2,8 @@
 #!desc=TikTok去广告/水印
 #!system=ios
 
+[URL Rewrite]
+^https?:\/\/(.*)\.tiktokv\.com\/aweme\/v2\/(follow\/)?feed\/ https://$1.tiktokv.com/aweme/v1/$2feed/ header
 
 [Script]
 douyin_ad = type=http-response,pattern=^https?:\/\/.*\.tiktokv\.com\/aweme\/v1\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin.js
